@@ -1,0 +1,68 @@
+  	nav{
+
+  		background-color: white;
+  		height: 100px;
+  		box-shadow: 0 0px 0px rgba(0,0,0,0.12);
+  		webkit-box-shadow: 0 0px 0px rgba(0,0,0,0.12);
+  	}
+
+  	nav a{
+  		font-family: 'Kranky', cursive;
+  		color: black;
+  		font-size: 4em;
+  	}
+  	nav a:hover {
+  		text-decoration: underline;
+  		font-weight: bold;
+  	}
+  	
+  	nav li:hover {
+  	    background-color: white;
+  	}
+  	.page-footer{
+  		background-color: white;
+  		color: black;
+  	}
+  	.page-footer h5{
+  		font-family: 'Kranky', cursive;
+  	}
+  	.footer-copyright{
+  		background-color: black; 
+  	}
+  	#footer a {
+  		color: black;
+  	}
+  	/*sidenav style*/
+  	#mobile-demo a{
+  		font-family: 'Kranky', cursive;
+  		font-size: 3em;
+  	}
+  	#mobile-demo a:hover{
+  		 text-decoration: underline;
+  		font-weight: bold;
+  	}
+  	#logo{
+  		margin: 7px;
+  		width: 100px;
+  	}
+  	
+  	#logo:hover{
+  		/*margin: 7px;*/
+  		width: 130px;
+  	}
+  	#content{
+  	   
+  	}
+  	.jump{
+  	    font-family: 'Playfair Display', serif;
+  	    padding: 7px;
+  	}
+  	@media (max-width: 992px) { 
+	  	#logo{
+	  		display: none;
+	  	}
+	  	#logo_mobile{
+	  		margin: 7px;
+  			width: 120px;
+  			}
+	  	}

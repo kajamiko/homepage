@@ -1,0 +1,87 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+    {% block title %}
+    {% endblock %}
+  <title>Kajamiko Web Design & Web Development</title>
+  	<!-- Miscellaneuos -->
+ 	<!-- Compiled and minified Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Kranky" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <!-- L'author -->
+  <meta name="author" content="Kajamiko">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css" >
+</head>
+
+<body>
+	<main>
+	<div class="navbar-fixed">
+  <nav>
+    <div id="nav" class="nav-wrapper">
+      <a href="#!" id="logo" class="brand-logo"><img id="logo" alt="kajamiko logo"  src="{{ url_for('static', filename='images/Logo.png') }}"></a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><img id="logo_mobile" alt="kajamiko logo"  src="{{ url_for('static', filename='images/Logo.png') }}"></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a class="black-text" href="">About</a></li>
+        <li><a class="black-text"  href="">Portfolio</a></li>
+        <li><a class="black-text"  href="">Offer</a></li>
+        <li><a class="black-text"  href="">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+  <ul class="sidenav" id="mobile-demo">
+        <li><a class="black-text"  href="sass.html">About</a></li>
+        <li><a class="black-text"  href="badges.html">Portfolio</a></li>
+        <li><a class="black-text"  href="collapsible.html">Offer</a></li>
+        <li><a class="black-text"  href="mobile.html">Contact</a></li>
+  </ul>
+
+
+     {% block content %}
+     {% endblock %}
+
+	</main>
+
+	<footer id="footer" class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="black-text">Kajamiko Web Design & Development</h5>
+                <p class="black-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="black-text">Links</h5>
+                <ul>
+                  <li><a class="black-text text-lighten-3" href="#!">Link 1</a></li>
+                  <li><a class="black-text text-lighten-3" href="#!">Link 2</a></li>
+                  <li><a class="black-text text-lighten-3" href="#!">Link 3</a></li>
+                  <li><a class="black-text text-lighten-3" href="#!">Link 4</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright black">
+            <div class="container black">
+            © 2018 Kajamiko
+            <a class="white-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+        </footer>
+<script type="text/javascript">
+
+	  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems);
+  });
+</script>
+</body>
+</html>
