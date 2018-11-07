@@ -29,13 +29,13 @@
 	<div class="navbar-fixed">
   <nav>
     <div id="nav" class="nav-wrapper">
-      <a href="#!" id="logo" class="brand-logo"><img id="logo" alt="kajamiko logo"  src="{{ url_for('static', filename='images/Logo.png') }}"></a>
+      <a href="{{ url_for('index') }}" id="logo" class="brand-logo"><img id="logo" alt="kajamiko logo"  src="{{ url_for('static', filename='images/Logo.png') }}"></a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><img id="logo_mobile" alt="kajamiko logo"  src="{{ url_for('static', filename='images/Logo.png') }}"></a>
       <ul class="right hide-on-med-and-down">
         <li><a class="black-text" href="">About</a></li>
         <li><a class="black-text"  href="">Portfolio</a></li>
         <li><a class="black-text"  href="">Offer</a></li>
-        <li><a class="black-text"  href="">Contact</a></li>
+        <li><a class="black-text"  href="{{ url_for('contact') }}">Contact</a></li>
       </ul>
     </div>
   </nav>
@@ -44,7 +44,7 @@
         <li><a class="black-text"  href="sass.html">About</a></li>
         <li><a class="black-text"  href="badges.html">Portfolio</a></li>
         <li><a class="black-text"  href="collapsible.html">Offer</a></li>
-        <li><a class="black-text"  href="mobile.html">Contact</a></li>
+        <li><a class="black-text"  href="{{ url_for('contact') }}">Contact</a></li>
   </ul>
 
 

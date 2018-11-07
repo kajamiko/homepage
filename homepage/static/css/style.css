@@ -26,9 +26,7 @@
   		font-weight: bold;
   	}
   	
-  	nav li:hover {
-  	    background-color: white;
-  	}
+
   	.page-footer{
   		background-color: white;
   		color: black;
@@ -57,7 +55,6 @@
   	}
   	
   	#logo:hover{
-  		/*margin: 7px;*/
   		width: 130px;
   	}
   	.content{
@@ -67,6 +64,55 @@
   	.jump{
   	    display: none;
   	}
+  	legend{
+  	  font-family: 'Kranky', cursive;
+  	  font-weight: bold;
+  	  font-size: 1.5em;
+  	}
+  	.decor{
+  	   padding: 20px;
+  		border-color: black;
+  		border-style: solid;
+    	border-width: 1px;
+  	}
+  	#moved{
+  		padding: 50px;
+  	}
+  	
+  	/*Materialize*/
+    
+    input[type=text]:focus:not([readonly]),
+    input[type=email]:focus:not([readonly]) {
+      border-bottom: 1px solid black !important;
+      box-shadow: 0 1px 0 0 black !important;
+    }
+
+    
+    
+    input[type=text]:focus:not([readonly]) + label {
+      color: black!important;
+    }
+    
+    input[type=email]:focus:not([readonly]) + label {
+      color: black !important;
+    }
+    
+    .input-field {
+      color: black !important;
+    }
+    
+    .btn {
+      background-color: black !important;
+        }
+    
+    .btn:focus {
+      background: #616161 !important;
+    }
+    
+    .btn:hover {
+      background: #616161 !important;
+    }
+   
   	@media (max-width: 992px) { 
 	  	#logo{
 	  		display: none;

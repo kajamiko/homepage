@@ -5,5 +5,34 @@
 {% endblock %}
 
 {% block content %}
-
+<div class="container">
+    <div id="moved" class="row">
+        <div class="col l8 offset-l2 s12">
+            <div>
+                <a href="https://m.me/XYZ">
+                Message me on Facebook
+                </a>
+            </div>
+            <form method="POST" class="decor" action="{{ url_for('contact') }}">
+                <legend>Drop me an email!</legend>
+                {{ form.csrf_token }}
+                
+                
+                {{ form.name(size=20) }}
+                {{ form.name.label }}
+                
+                {{ form.email }}
+                {{ form.email.label }}
+                
+                {{ form.subject(placeholder="Subject") }}
+                {{ form.subject.label }}
+                
+                {{ form.message(size=500, placeholder="Your message", rows="4") }}
+                
+                {{ form.submit(class="btn") }}
+            </form>
+            <p>{{ feedback }}</p>
+        </div>     
+    </div>
+</div>
 {% endblock %}
