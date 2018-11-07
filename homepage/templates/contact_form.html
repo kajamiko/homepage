@@ -7,14 +7,21 @@
 {% block content %}
 <div class="container">
     <div id="moved" class="row">
-        <div class="col l8 offset-l2 s12">
-            <div>
-                <a href="https://m.me/XYZ">
-                Message me on Facebook
+        <div class="col l4 offset-l4 s3 offset-s5">
+                <a id="fb_text" class="btn" href="https://m.me/XYZ">
+                Message me <span class="hide-on-med-and-down">on Facebook </span><i class="fab fa-facebook-messenger"></i>
                 </a>
-            </div>
-            <form method="POST" class="decor" action="{{ url_for('contact') }}">
-                <legend>Drop me an email!</legend>
+        </div>
+    </div>
+    <div  class="row">
+                 <p class="center-align">OR</p> 
+    </div>
+    <div  class="row">
+
+            <form method="POST" class="decor col l8 offset-l2 s12" action="{{ url_for('contact') }}">
+                <div class="input-field col l6 offset-l3 ">
+                    <legend>Drop me an email!</legend>
+                </div>
                 {{ form.csrf_token }}
                 
                 
@@ -28,11 +35,12 @@
                 {{ form.subject.label }}
                 
                 {{ form.message(size=500, placeholder="Your message", rows="4") }}
-                
+                <div class="input-field col l4 offset-l4 ">
                 {{ form.submit(class="btn") }}
+                </div>
             </form>
             <p>{{ feedback }}</p>
-        </div>     
+            
     </div>
 </div>
 {% endblock %}

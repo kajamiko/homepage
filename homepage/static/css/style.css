@@ -21,12 +21,21 @@
   		color: black;
   		font-size: 4em;
   	}
-  	nav a:hover {
+  	nav a:hover, footer a:hover {
   		text-decoration: underline;
   		font-weight: bold;
   	}
   	
-
+    #bar{
+      
+      background-image: url('../images/Canva_confetti.jpg');
+      background-position: center;
+      background-repeat: no-repeat; /* Do not repeat the image */
+      background-size: cover;
+    }
+    .bars{
+      height: 150px;
+    }
   	.page-footer{
   		background-color: white;
   		color: black;
@@ -61,8 +70,15 @@
   	   font-family: 'Playfair Display', serif;
   	    padding: 7px;
   	}
+  	
   	.jump{
+  	  padding-top: 10px;
   	    display: none;
+  	}
+  	
+  	#info{
+  	  
+  	  font-family: 'Mukta', sans-serif;
   	}
   	legend{
   	  font-family: 'Kranky', cursive;
@@ -70,14 +86,15 @@
   	  font-size: 1.5em;
   	}
   	.decor{
-  	   padding: 20px;
+  	 
   		border-color: black;
   		border-style: solid;
     	border-width: 1px;
   	}
   	#moved{
-  		padding: 50px;
+  		padding-top: 50px;
   	}
+  	
   	
   	/*Materialize*/
     
@@ -100,9 +117,14 @@
     .input-field {
       color: black !important;
     }
-    
+    .divider{
+    width:5px;
+    height:auto;
+    display:inline-block;
+}
     .btn {
       background-color: black !important;
+      font-size: 0.8em;
         }
     
     .btn:focus {
@@ -112,7 +134,10 @@
     .btn:hover {
       background: #616161 !important;
     }
-   
+   #fb_text{
+     margin: 10px;
+     font-size:0.7em;
+   }
   	@media (max-width: 992px) { 
 	  	#logo{
 	  		display: none;

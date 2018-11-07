@@ -4,24 +4,48 @@
 {% endblock %}
 
 {% block content %}
-<div  class="container">
+<!--<div  class="container">-->
     <div class="col s12 m12 l12  black white-text">
         <div class="content ">
-            <h3 class="jump center-align">Making powerful and affordable websites</h3>
+          <div class="bars">
+            
+            <h3 class="jump center-align">Making powerful and stylish websites is my passion!</h3>
+            
+            </div>
+              <div class="bars" id="bar"> </div>
             
             <div class=" jump card-panel grey lighten-5 z-depth-1">
           <div class="row valign-wrapper">
             <div class="col s2">
               <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="" class="circle responsive-img"> 
             </div>
-            <div class="col s10">
-              <span class="black-text">
-                This is a square image. Add the "circle" class to it to make it appear circular.
-              </span>
+            <div id="info" class="black-text col s10">
+              <p >
+                <a class="black-text" href="https://goo.gl/maps/whZiZcjvttD2"><i class="fas fa-map-marker-alt"></i><span "hide-on-med-and-down">Luton</span></a>
+                </p>
+                <h5 >Who am I?</h5>
+              <p >
+                My name is Kaja and I am a Web Designer and Developer. 
+                
+              </p>
+              <p >
+                This means that, not only I can create a beautiful and resposive website to promote your business, but also I can make it boost by adding functional and handy addons, including e-commerce.
+              </p>
+              <h5 >What tools will I use?</h5>
+              <p>
+                Well there's a range of them! I am confident in using programming languages like Python and Javascript, not to mention HTML and CSS to make your website look great! I am also constantly improving to get better and gain new skills.
+              </p>
+              <p>
+                  <i class="fab fa-python"></i>&nbsp;
+                  <i class="fab fa-html5"></i>&nbsp;
+                  <i class="fab fa-js-square"></i>&nbsp;
+                  <i class="fab fa-react"></i>&nbsp;
+                  <i class="fab fa-wordpress-simple"></i>&nbsp;
+              </p>
             </div>
           </div>
         </div>
         </div>
     </div>
-</div>
+<!--</div>-->
 {% endblock %}
