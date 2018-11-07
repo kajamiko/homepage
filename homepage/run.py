@@ -14,15 +14,15 @@ def async_send_mail(app, msg):
 app = Flask(__name__)
 app.config.update(dict(
     SECRET_KEY='development key',
-    MAIL_SERVER='smtp.googlemail.com',
-    # MAIL_SERVER='smtp.mail.yahoo.com',
+    # MAIL_SERVER='smtp.googlemail.com',
+    MAIL_SERVER='smtp.mail.yahoo.com',
     MAIL_PORT = 465,
-    MAIL_DEFAULT_SENDER = 'stietencron.km@gmail.com',
-    MAIL_USERNAME = 'stietencron.km@gmail.com',
-    MAIL_PASSWORD = 'L@wendowa9',
-    # MAIL_DEFAULT_SENDER = 'kajamiko@yahoo.com',
-    # MAIL_USERNAME = 'kajamiko@yahoo.com',
-    # MAIL_PASSWORD = '9jRLh5RTAsncFNF',
+    # MAIL_DEFAULT_SENDER = 'stietencron.km@gmail.com',
+    # MAIL_USERNAME = 'stietencron.km@gmail.com',
+    # MAIL_PASSWORD = 'L@wendowa9',
+    MAIL_DEFAULT_SENDER = 'kajamiko@yahoo.com',
+    MAIL_USERNAME = 'kajamiko@yahoo.com',
+    MAIL_PASSWORD = '9jRLh5RTAsncFNF',
     MAIL_USE_TLS = False,
     MAIL_USE_SSL = True
 ))
@@ -49,12 +49,19 @@ def contact():
     form = ContactForm()
     if request.method == 'POST':
         if form.validate_on_submit():
-            feedback = send_mail(request.form['subject'], "kajamiko.webdev@gmail.com", 'mail/message.html',
+            send_mail(request.form['subject'], "kajamiko.webdev@gmail.com", 'mail/message.html',
                     name = request.form['name'],
                     email = request.form['email'],
                     message = request.form['message'])
-                
+                    
+            return redirect(url_for('success'))
     return render_template('contact_form.html', form=form)
+    
+@app.route('/success')
+def success():
+    
+    return render_template('success.html')
+    
     
 if __name__ == '__main__':
     if 'liveconsole' not in gethostname():
