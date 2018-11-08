@@ -21,7 +21,8 @@
   		color: black;
   		font-size: 4em;
   	}
-  	nav a:hover, footer a:hover {
+  	nav a:hover, footer a:hover, #mobile-demo a:hover,
+  	footer h5:hover{
   		text-decoration: underline;
   		font-weight: bold;
   	}
@@ -138,6 +139,8 @@
      margin: 10px;
      font-size:0.7em;
    }
+   textarea{height: 8rem;}
+   
   	@media (max-width: 992px) { 
 	  	#logo{
 	  		display: none;
@@ -146,4 +149,35 @@
 	  		margin: 7px;
   			width: 120px;
   			}
+  			
+  			.content{
+  			  font-size: 2em;
+  			}
+  			#bar{
+  			  height: 300px;
+  			}
+  			
+  		  .decor{
+  		    font-size: 1.5em;
+  		  }
+  		  .btn{
+  		    font-size: 0.9em;
+  		  }
+  		  textarea{height: 12rem;}
+  		  .input-field>label{
+  		    font-size: 1em;
+  		  }
+  		  
+  		  #or{
+  		    font-size: 2em;
+  		  }
+  		  #fb_text{
+  		    font-size: 1.5em;
+  		  }
+  		  footer{
+  		    font-size: 1.2em;
+  		  }
+  		  .sidenav-div{
+  		    padding: 15px 8px 15px 8px;
+  		  }
 	  	}

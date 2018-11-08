@@ -44,10 +44,18 @@
   </nav>
 </div>
   <ul class="sidenav" id="mobile-demo">
-        <li><a class="black-text"  href="{{ url_for('index') }}">About</a></li>
-        <li><a class="black-text"  href="badges.html">Portfolio</a></li>
-        <li><a class="black-text"  href="collapsible.html">Offer</a></li>
-        <li><a class="black-text"  href="{{ url_for('contact') }}">Contact</a></li>
+        <div class="sidenav-div">
+          <li><a class="black-text"  href="{{ url_for('index') }}">About</a></li>
+        </div>
+        <div class="sidenav-div">
+          <li><a class="black-text"  href="badges.html">Portfolio</a></li>
+        </div>
+        <div class="sidenav-div">  
+          <li><a class="black-text"  href="collapsible.html">Offer</a></li>
+        </div>
+        <div class="sidenav-div">
+          <li><a class="black-text"  href="{{ url_for('contact') }}">Contact</a></li>
+        </div>
   </ul>
 
 
@@ -59,17 +67,21 @@
 	<footer id="footer" class="page-footer">
           <div class="container">
             <div class="row">
-              <div class="col l6 s12">
+              <div class="col l6 s6">
                 <h5 class="black-text">Kajamiko Web Design & Development</h5>
                 <p class="black-text text-lighten-4">Creating Websites in UK.</p>
               </div>
-              <div class="col l4 offset-l2 s12">
+              <div class="col l4 offset-l2 s4 offset-s2">
                 <h5 class="black-text">Social & Development</h5>
                 <ul>
-                  <li><a target="_blank" class="black-text" href="https://www.linkedin.com/in/kaja-mikolajczyk-712b55142/"><i class="fab fa-linkedin"></i><span "hide-on-med-and-down">LinkedIn</span></a>
-</li>
-                  <li><a target="_blank" class="black-text" href="https://github.com/kajamiko"><i class="fab fa-github-square"></i><span "hide-on-med-and-down">Github</span></a></li>
-                  <li><a target="_blank" href="skype:live:kajamiko.webdev?call"><i class="fab fa-skype"></i>Skype Call</li>
+                  <li>
+                    <a target="_blank" class="black-text" href="https://www.linkedin.com/in/kaja-mikolajczyk-712b55142/"><i class="fab fa-linkedin"></i><span "hide-on-med-and-down">LinkedIn</span></a>
+                    </li>
+                  <li>
+                    <a target="_blank" class="black-text" href="https://github.com/kajamiko"><i class="fab fa-github-square"></i><span "hide-on-med-and-down">Github</span></a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="skype:live:kajamiko.webdev?call"><i class="fab fa-skype"></i>Skype Call</li>
                   <li><a target="_blank" class="black-text" href="kajamiko.webdev@gmail.com"> <i class="fas fa-at"></i> <span "hide-on-med-and-down">Email</span></li>
                 </ul>
               </div>

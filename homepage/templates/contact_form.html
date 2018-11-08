@@ -7,35 +7,42 @@
 {% block content %}
 <div class="container">
     <div id="moved" class="row">
-        <div class="col l4 offset-l4 s3 offset-s5">
-                <a target="_blank" id="fb_text" class="btn" href="https://m.me/Kajamiko">
+        <div class="col l4 offset-l4 s4 offset-s4">
+                <a target="_blank" id="fb_text" class="btn btn-large" href="https://m.me/Kajamiko">
                 Message me <span class="hide-on-med-and-down">on Facebook </span><i class="fab fa-facebook-messenger"></i>
                 </a>
         </div>
     </div>
     <div  class="row">
-                 <p class="center-align">OR</p> 
+         <div class="input-field col l1 offset-l5 s1 offset-s5">
+                 <p id="or" class="">OR</p> 
+        </div>
     </div>
     <div  class="row">
 
             <form method="POST" class="decor col l8 offset-l2 s12" action="{{ url_for('contact') }}">
-                <div class="input-field col l6 offset-l3 ">
+                <div class="input-field col l6 offset-l3 s6 offset-s3">
                     <legend>Drop me an email!</legend>
                 </div>
                 {{ form.csrf_token }}
-                
-                
+                <div class="input-field col l12 s12 ">
                 {{ form.name(size=20) }}
                 {{ form.name.label }}
-                
+                </div>
+                <div class="input-field col l12 s12 ">
                 {{ form.email }}
                 {{ form.email.label }}
-                
-                {{ form.subject(placeholder="Subject") }}
+                </div>
+                <div class="input-field col l12 s12 ">
+                {{ form.subject }}
                 {{ form.subject.label }}
-                
-                {{ form.message(size=500, placeholder="Your message", rows="4") }}
-                <div class="input-field col l4 offset-l4 ">
+                </div>
+                <div class="input-field col l12 s12 ">
+                    
+                {{ form.message(size=500, rows="4") }}
+                {{ form.message.label }}
+                </div>
+                <div class="input-field col l3 offset-l5 s4 offset-s4">
                 {{ form.submit(class="btn") }}
                 </div>
             </form>
