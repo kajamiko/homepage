@@ -19,7 +19,9 @@
   	nav a{
   		font-family: 'Kranky', cursive;
   		color: black;
-  		font-size: 4em;
+  	}
+  	nav ul a {
+  	  font-size: 1.5rem;
   	}
   	nav a:hover, footer a:hover, #mobile-demo a:hover,
   	footer h5:hover{
@@ -163,7 +165,7 @@
   		  .btn{
   		    font-size: 0.9em;
   		  }
-  		  textarea{height: 12rem;}
+  		  textarea{height: 14rem;}
   		  .input-field>label{
   		    font-size: 1em;
   		  }
@@ -176,6 +178,41 @@
   		  }
   		  footer{
   		    font-size: 1.2em;
+  		  }
+  		  .sidenav-div{
+  		    padding: 15px 8px 15px 8px;
+  		  }
+	  	}
+	  	/*iPhone X etc*/
+	  	@media (max-width: 767.98px) {
+	  	  
+	  	  
+  			.content{
+  			  font-size: 2em;
+  			}
+  			#bar{
+  			  height: 300px;
+  			}
+  			
+  		  .decor{
+  		    font-size: 1.5em;
+  		  }
+  		  .btn{
+  		    font-size: 0.9em;
+  		  }
+  		  textarea{height: 14rem;}
+  		  .input-field>label{
+  		    font-size: 1.1em;
+  		  }
+  		  
+  		  #or{
+  		    font-size: 2em;
+  		  }
+  		  #fb_text{
+  		    font-size: 1.5em;
+  		  }
+  		  footer{
+  		    font-size: 1.5em;
   		  }
   		  .sidenav-div{
   		    padding: 15px 8px 15px 8px;
