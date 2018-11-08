@@ -5,8 +5,11 @@
 {% endblock %}
 
 {% block content %}
-<div class="container">
-    <div id="moved" class="row">
+
+<div id="moved" class="container">
+    <h4><i class="fas fa-phone"></i>
+    07963562671</h4>
+    <div class="row">
         <div class="col l4 offset-l4 s4 offset-s4">
                 <a target="_blank" id="fb_text" class="btn btn-large" href="https://m.me/Kajamiko">
                 Message me <span class="hide-on-med-and-down">on Facebook </span><i class="fab fa-facebook-messenger"></i>
@@ -21,7 +24,7 @@
     <div  class="row">
 
             <form method="POST" class="decor col l8 offset-l2 s12" action="{{ url_for('contact') }}">
-                <div class="input-field col l6 offset-l3 s6 offset-s3">
+                <div class="input-field col l6 offset-l3 s8 offset-s3">
                     <legend>Drop me an email!</legend>
                 </div>
                 {{ form.csrf_token }}

@@ -31,7 +31,7 @@
   	
     #bar{
       
-      background-image: url('../images/Canva_confetti.jpg');
+      background-image: url('../images/art-cogs-colorful.jpg');
       background-position: center;
       background-repeat: no-repeat; /* Do not repeat the image */
       background-size: cover;
@@ -209,7 +209,7 @@
   		    font-size: 2em;
   		  }
   		  #fb_text{
-  		    font-size: 1.5em;
+  		    font-size: 1.2em;
   		  }
   		  footer{
   		    font-size: 1.5em;
