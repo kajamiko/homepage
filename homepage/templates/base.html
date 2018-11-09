@@ -37,7 +37,7 @@
       <ul class="right hide-on-med-and-down">
         <li><a class="black-text" href="{{ url_for('index') }}">About</a></li>
         <li><a class="black-text"  href="">Portfolio</a></li>
-        <li><a class="black-text"  href="">Offer</a></li>
+        <li><a class="black-text"  href="{{ url_for('offer') }}">Offer</a></li>
         <li><a class="black-text"  href="{{ url_for('contact') }}">Contact</a></li>
       </ul>
     </div>
@@ -51,7 +51,7 @@
           <li><a class="black-text"  href="badges.html">Portfolio</a></li>
         </div>
         <div class="sidenav-div">  
-          <li><a class="black-text"  href="collapsible.html">Offer</a></li>
+          <li><a class="black-text"  href="{{ url_for('offer') }}">Offer</a></li>
         </div>
         <div class="sidenav-div">
           <li><a class="black-text"  href="{{ url_for('contact') }}">Contact</a></li>
@@ -96,5 +96,6 @@
         </footer>
 <script type="text/javascript" src="{{ url_for('static', filename='js/sidenav.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='js/slide.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/collapse.js') }}"></script>
 </body>
 </html>

@@ -62,7 +62,12 @@ def success():
     
     return render_template('success.html')
     
+
+@app.route('/offer')
+def offer():
     
+    return render_template('offer.html')
+
 if __name__ == '__main__':
     if 'liveconsole' not in gethostname():
         app.run(host=os.getenv('IP'), port=int(os.getenv('PORT')), debug=True)

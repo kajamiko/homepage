@@ -53,10 +53,15 @@
   		color: black;
   	}
   	/*sidenav style*/
-  	#mobile-demo a{
+  	#mobile-demo a, #title{
   		font-family: 'Kranky', cursive;
   		font-size: 3em;
   	}
+  	
+  	.transparent-div{
+  	  background-color: rgba(255, 255, 255, 0.6);
+  	}
+  	
   	#mobile-demo a:hover{
   		 text-decoration: underline;
   		font-weight: bold;
@@ -98,6 +103,13 @@
   		padding-top: 50px;
   	}
   	
+  	#offer{
+  	  padding-top: 50px;
+  	  background-image: url('../images/pexels-flowers.jpeg');
+      background-position: center;
+      background-repeat: no-repeat; /* Do not repeat the image */
+      background-size: cover;
+  	}
   	
   	/*Materialize*/
     
@@ -143,7 +155,13 @@
    }
    textarea{height: 8rem;}
    
+   
+   /*Tablets*/
   	@media (max-width: 992px) { 
+
+      .collapse{
+        font-size: 2em;
+      }
 	  	#logo{
 	  		display: none;
 	  	}
@@ -183,10 +201,11 @@
   		    padding: 15px 8px 15px 8px;
   		  }
 	  	}
-	  	/*iPhone X etc*/
+	  	
+	 /*iPhone X etc*/
 	  	@media (max-width: 767.98px) {
 	  	  
-	  	  
+
   			.content{
   			  font-size: 2em;
   			}
