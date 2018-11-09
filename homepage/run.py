@@ -1,5 +1,4 @@
 import os
-import secret
 from socket import gethostname
 from flask_mail import Mail, Message
 from flask import Flask, render_template, url_for, request, redirect, flash
