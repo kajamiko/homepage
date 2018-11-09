@@ -15,13 +15,11 @@ def async_send_mail(app, msg):
 app = Flask(__name__)
 app.config.update(dict(
     SECRET_KEY='development key',
-    # MAIL_SERVER='smtp.googlemail.com',
     MAIL_SERVER='smtp.mail.yahoo.com',
     MAIL_PORT = 465,
-
-    MAIL_DEFAULT_SENDER = os.getenv("MAIL_USERNAME", secret.MAIL_USERNAME),
-    MAIL_USERNAME = os.getenv("MAIL_USERNAME", secret.MAIL_USERNAME),
-    MAIL_PASSWORD = os.getenv("MAIL_PASSWORD", secret.MAIL_PASSWORD),
+    MAIL_DEFAULT_SENDER = str(os.environ.get('MAIL_USERNAME')),
+    MAIL_USERNAME = str(os.environ.get('MAIL_USERNAME')),
+    MAIL_PASSWORD = str(os.environ.get('MAIL_PASSWORD')),
     MAIL_USE_TLS = False,
     MAIL_USE_SSL = True
 ))
