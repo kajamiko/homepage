@@ -1,4 +1,5 @@
 import os
+import secret
 from socket import gethostname
 from flask_mail import Mail, Message
 from flask import Flask, render_template, url_for, request, redirect, flash
@@ -17,12 +18,10 @@ app.config.update(dict(
     # MAIL_SERVER='smtp.googlemail.com',
     MAIL_SERVER='smtp.mail.yahoo.com',
     MAIL_PORT = 465,
-    # MAIL_DEFAULT_SENDER = 'stietencron.km@gmail.com',
-    # MAIL_USERNAME = 'stietencron.km@gmail.com',
-    # MAIL_PASSWORD = 'L@wendowa9',
-    MAIL_DEFAULT_SENDER = 'kajamiko@yahoo.com',
-    MAIL_USERNAME = 'kajamiko@yahoo.com',
-    MAIL_PASSWORD = '9jRLh5RTAsncFNF',
+
+    MAIL_DEFAULT_SENDER = os.getenv("MAIL_USERNAME", secret.MAIL_USERNAME),
+    MAIL_USERNAME = os.getenv("MAIL_USERNAME", secret.MAIL_USERNAME),
+    MAIL_PASSWORD = os.getenv("MAIL_PASSWORD", secret.MAIL_PASSWORD),
     MAIL_USE_TLS = False,
     MAIL_USE_SSL = True
 ))
