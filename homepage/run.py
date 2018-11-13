@@ -1,7 +1,8 @@
+# -*- coding: utf-8 -*-
 import os
 from socket import gethostname
 from flask_mail import Mail, Message
-from flask import Flask, render_template, url_for, request, redirect, flash
+from flask import Flask, render_template, url_for, request, redirect, flash, session
 from forms import ContactForm
 
 
@@ -30,15 +31,23 @@ def send_mail(subject, recipient, template, **kwargs):
     msg.html = render_template(template, **kwargs)
     try:
         mail.send(msg)
-        return 'Your message has been sent'
+        if session.get('lang') == 'pl':
+            return 'Wiadomość została wysłana.'
+        else:
+            return 'Your message has been sent'
     except Exception as e:
         print(e)
         return "Something went wrong x.x!"
     return None
 
+
 @app.route('/')
 def index():
-    return render_template("index.html")
+
+    if session.get('lang') == 'pl':
+        return render_template("index_pl.html")
+    else:
+        return render_template("index.html")
     
 @app.route('/contact', methods=('GET', 'POST'))
 def contact():
@@ -49,20 +58,35 @@ def contact():
                     name = request.form['name'],
                     email = request.form['email'],
                     message = request.form['message'])
-                    
             return redirect(url_for('success'))
-    return render_template('contact_form.html', form=form)
+    if session.get('lang') == 'pl':
+        return render_template('contact_form_pl.html', form=form)
+    else:
+        return render_template('contact_form.html', form=form)
     
 @app.route('/success')
 def success():
-    
-    return render_template('success.html')
+    if session.get('lang') == 'pl':
+        return render_template("success_pl.html")
+    else:
+        return render_template('success.html')
     
 
 @app.route('/offer')
 def offer():
+    if session.get('lang') == 'pl':
+        return render_template("offer_pl.html")
+    else:
+        return render_template('offer.html')
     
-    return render_template('offer.html')
+@app.route('/<lang>')
+def set_lang(lang='eng'):
+    session['lang'] = lang
+    return redirect(redirect_url())
+
+
+def redirect_url(default='index'):
+    return request.referrer
 
 if __name__ == '__main__':
     if 'liveconsole' not in gethostname():

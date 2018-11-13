@@ -32,13 +32,13 @@
 	<div class="navbar-fixed">
   <nav>
     <div id="nav" class="nav-wrapper">
-      <a href="{{ url_for('index') }}" id="logo" class="brand-logo"><img id="logo" alt="kajamiko logo"  src="{{ url_for('static', filename='images/Logo.png') }}"></a>
+      <a href="{{ url_for('index', lang='pl') }}" id="logo" class="brand-logo"><img id="logo" alt="kajamiko logo"  src="{{ url_for('static', filename='images/Logo.png') }}"></a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><img id="logo_mobile" alt="kajamiko logo"  src="{{ url_for('static', filename='images/Logo.png') }}"></a>
       <ul class="right hide-on-med-and-down">
-        <li><a class="black-text" href="{{ url_for('index') }}">About</a></li>
+        <li><a class="black-text" href="{{ url_for('index') }}">O mnie</a></li>
         <li><a class="black-text"  href="">Portfolio</a></li>
-        <li><a class="black-text"  href="{{ url_for('offer') }}">Offer</a></li>
-        <li><a class="black-text"  href="{{ url_for('contact') }}">Contact</a></li>
+        <li><a class="black-text"  href="{{ url_for('offer') }}">Oferta</a></li>
+        <li><a class="black-text"  href="{{ url_for('contact') }}">Kontakt</a></li>
       </ul>
       <a href="{{ url_for('set_lang', lang='pl') }}" class="right">PL</span class="hide-on-med-and-down"></a><span class="right"> &nbsp; &nbsp;</span><a href="{{ url_for('set_lang', lang='eng') }}" class="right"><span class="hide-on-med-and-down">ENG</span></a>
     </div>
@@ -46,16 +46,16 @@
 </div>
   <ul class="sidenav" id="mobile-demo">
         <div class="sidenav-div">
-          <li><a class="black-text"  href="{{ url_for('index') }}">About</a></li>
+          <li><a class="black-text"  href="{{ url_for('index') }}">O mnie</a></li>
         </div>
         <div class="sidenav-div">
           <li><a class="black-text"  href="">Portfolio</a></li>
         </div>
         <div class="sidenav-div">  
-          <li><a class="black-text"  href="{{ url_for('offer') }}">Offer</a></li>
+          <li><a class="black-text"  href="{{ url_for('offer') }}">Oferta</a></li>
         </div>
         <div class="sidenav-div">
-          <li><a class="black-text"  href="{{ url_for('contact') }}">Contact</a></li>
+          <li><a class="black-text"  href="{{ url_for('contact') }}">Kontakt</a></li>
         </div>
   </ul>
 

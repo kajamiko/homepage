@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'base_pl.html' %}
 {% block title %}
 
   <title> Contact Kajamiko</title>
@@ -12,40 +12,42 @@
     <div class="row">
 
                 <p class="center-align"><a target="_blank" id="fb_text" class="btn btn-large" href="https://m.me/Kajamiko">
-                Message me <span class="hide-on-med-and-down">on Facebook </span><i class="fab fa-facebook-messenger"></i>
-                </a></p>
+                Napisz <span class="hide-on-med-and-down">na Facebooku </span><i class="fab fa-facebook-messenger"></i>
+                </a>
+                </p>
 
     </div>
     <div  class="row">
-                 <p class="center-align">OR</p> 
+
+                 <p class="center-align">LUB</p> 
 
     </div>
     <div  class="row">
 
             <form method="POST" class="decor col l8 offset-l2 s12" action="{{ url_for('contact') }}">
 
-                    <legend class="center-align">Drop me an email!</legend>
+                    <legend  class="center-align">Wyslij maila!</legend>
 
                 {{ form.csrf_token }}
                 <div class="input-field col l12 s12 ">
+                <label for="name">Imię</label>
                 {{ form.name(size=20) }}
-                {{ form.name.label }}
                 </div>
                 <div class="input-field col l12 s12 ">
+                <label for="email">Adres mailowy</label>
                 {{ form.email }}
-                {{ form.email.label }}
                 </div>
                 <div class="input-field col l12 s12 ">
+                <label for="subject">Temat</label>
                 {{ form.subject }}
-                {{ form.subject.label }}
                 </div>
                 <div class="input-field col l12 s12 ">
-                    
+                <label for="message">Wiadomość</label>  
                 {{ form.message(size=500, rows="4") }}
-                {{ form.message.label }}
+                
                 </div>
                 <div class="input-field col l3 offset-l5 s4 offset-s4">
-                {{ form.submit(class="btn") }}
+                <button class="btn" type="submit">Wyślij</button>
                 </div>
             </form>
             <p>{{ feedback }}</p>
