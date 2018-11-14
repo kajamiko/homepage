@@ -35,13 +35,14 @@
       <a href="{{ url_for('index', lang='pl') }}" id="logo" class="brand-logo"><img id="logo" alt="kajamiko logo"  src="{{ url_for('static', filename='images/Logo.png') }}"></a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><img id="logo_mobile" alt="kajamiko logo"  src="{{ url_for('static', filename='images/Logo.png') }}"></a>
       <ul class="right hide-on-med-and-down">
+        <li><a href="{{ url_for('set_lang', lang='pl') }}" class="black-text" >PL</a></li>
+        <li><a href="{{ url_for('set_lang', lang='eng') }}" class="black-text" >ENG</a></li>
         <li><a class="black-text" href="{{ url_for('index') }}">O mnie</a></li>
         <li><a class="black-text"  href="">Portfolio</a></li>
         <li><a class="black-text"  href="{{ url_for('offer') }}">Oferta</a></li>
         <li><a class="black-text"  href="{{ url_for('contact') }}">Kontakt</a></li>
       </ul>
-      <a href="{{ url_for('set_lang', lang='pl') }}" class="right">PL</span class="hide-on-med-and-down"></a><span class="right"> &nbsp; &nbsp;</span><a href="{{ url_for('set_lang', lang='eng') }}" class="right"><span class="hide-on-med-and-down">ENG</span></a>
-    </div>
+
   </nav>
 </div>
   <ul class="sidenav" id="mobile-demo">
