@@ -23,6 +23,10 @@
   	nav ul a {
   	  font-size: 1.5rem;
   	}
+  	
+  	#lang a {
+  	  font-size: 1rem;
+  	}
   	nav a:hover, footer a:hover, #mobile-demo a:hover,
   	footer h5:hover{
   		text-decoration: underline;
@@ -187,7 +191,9 @@
   		  .input-field>label{
   		    font-size: 1em;
   		  }
-  		  
+  		    	#lang a {
+  	  font-size: 1.5rem;
+  	}
 
   		  #fb_text{
   		    font-size: 1.5em;
