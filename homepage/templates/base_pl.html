@@ -37,7 +37,7 @@
 
       <ul class="right hide-on-med-and-down">
         <li><a class="black-text" href="{{ url_for('index') }}">O mnie</a></li>
-        <li><a class="black-text"  href="">Portfolio</a></li>
+        <li><a class="black-text"  href="{{ url_for('portfolio') }}">Portfolio</a></li>
         <li><a class="black-text"  href="{{ url_for('offer') }}">Oferta</a></li>
         <li><a class="black-text"  href="{{ url_for('contact') }}">Kontakt</a></li>
       </ul>
@@ -52,7 +52,7 @@
           <li><a class="black-text"  href="{{ url_for('index') }}">O mnie</a></li>
         </div>
         <div class="sidenav-div">
-          <li><a class="black-text"  href="">Portfolio</a></li>
+          <li><a class="black-text"  href="{{ url_for('portfolio') }}">Portfolio</a></li>
         </div>
         <div class="sidenav-div">  
           <li><a class="black-text"  href="{{ url_for('offer') }}">Oferta</a></li>
@@ -61,13 +61,11 @@
           <li><a class="black-text"  href="{{ url_for('contact') }}">Kontakt</a></li>
         </div>
   </ul>
-
-
+  
      {% block content %}
      {% endblock %}
-
+     
 	</main>
-
 	<footer id="footer" class="page-footer">
           <div class="container">
             <div class="row">
@@ -75,6 +73,8 @@
                 <h5 class="black-text">Kajamiko Web Design & Development</h5>
                 <p> This site is powered by <a href="https://www.python.org/">Python</a>, <a href="http://flask.pocoo.org/">Flask</a> and <a href="https://materializecss.com/">Materialize.css</a></p>
                 <p class="black-text text-lighten-4">Photo by Digital Buggu from Pexels</p>
+                {% block credits %}
+                {% endblock %}
               </div>
               <div class="col l4 offset-l2 s4 offset-s2">
                 <h5 class="black-text">Social & Development</h5>

@@ -78,6 +78,13 @@ def offer():
         return render_template("offer_pl.html")
     else:
         return render_template('offer.html')
+        
+@app.route('/portfolio')
+def portfolio():
+    if session.get('lang') == 'pl':
+        return render_template("portfolio_pl.html")
+    else:
+        return render_template('portfolio.html')
     
 @app.route('/<lang>')
 def set_lang(lang='eng'):

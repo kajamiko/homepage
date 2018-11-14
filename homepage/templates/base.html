@@ -36,7 +36,7 @@
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><img id="logo_mobile" alt="kajamiko logo"  src="{{ url_for('static', filename='images/Logo.png') }}"></a>
       <ul class="right hide-on-med-and-down">
         <li><a class="black-text" href="{{ url_for('index') }}">About</a></li>
-        <li><a class="black-text"  href="">Portfolio</a></li>
+        <li><a class="black-text"  href="{{ url_for('portfolio') }}">Portfolio</a></li>
         <li><a class="black-text"  href="{{ url_for('offer') }}">Offer</a></li>
         <li><a class="black-text"  href="{{ url_for('contact') }}">Contact</a></li>
       </ul>
@@ -53,7 +53,7 @@
           <li><a class="black-text"  href="{{ url_for('index') }}">About</a></li>
         </div>
         <div class="sidenav-div">
-          <li><a class="black-text"  href="">Portfolio</a></li>
+          <li><a class="black-text"  href="{{ url_for('portfolio') }}">Portfolio</a></li>
         </div>
         <div class="sidenav-div">  
           <li><a class="black-text"  href="{{ url_for('offer') }}">Offer</a></li>

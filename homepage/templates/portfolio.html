@@ -7,7 +7,17 @@
 {% block content %}
 
 <div class="container">
-    
+    <div class="row">
+        <h2 id="title" class="center-align">My works</h2>
+        <div class="col s12 m10 offset-m1 offset-l1 l10">
+            <h3 class="center-align">Page in development...</h3>
+            <img class="responsive-img" src="{{ url_for('static', filename='images/colors-containers.jpg') }}" alt="picture of development">
+        </div>
+    </div>
 </div>
 
+{% endblock %}
+
+{% block credits %}
+<p>Photo by rawpixel.com from Pexels</p>
 {% endblock %}
