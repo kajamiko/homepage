@@ -98,3 +98,4 @@ def redirect_url(default='index'):
 if __name__ == '__main__':
     if 'liveconsole' not in gethostname():
         app.run(host=os.getenv('IP'), port=int(os.getenv('PORT')), debug=True)
+
