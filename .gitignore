@@ -4,3 +4,4 @@ homepage/test_views.py
 homepage/__pycache__
 .c9/
 secret.py
+requirements.txt
