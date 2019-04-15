@@ -19,7 +19,7 @@ def async_send_mail(app, msg):
 def create_app():
     app = Flask(__name__)
     app.config.update(dict(
-    SQLALCHEMY_DATABASE_URI=secret.SQLALCHEMY_DATABASE_URI,
+    SQLALCHEMY_DATABASE_URI=str(os.environ.get('SQLALCHEMY_DATABASE_URI')),
     SQLALCHEMY_POOL_RECYCLE=299,
     SQLALCHEMY_TRACK_MODIFICATIONS=False,
     SECRET_KEY='development key',
