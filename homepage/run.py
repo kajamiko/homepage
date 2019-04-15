@@ -7,8 +7,6 @@ from forms import ContactForm
 from extensions import db
 from blogpost import Blogpost
 
-import secret
-
 
 
 def async_send_mail(app, msg):
