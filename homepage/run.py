@@ -4,7 +4,7 @@ from socket import gethostname
 from flask import Flask, render_template, url_for, request, redirect, flash, session
 from forms import ContactForm
 from flask_sqlalchemy import SQLAlchemy
-
+import datetime
 
 
 
@@ -28,9 +28,10 @@ class Blogpost(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(255))
     content = db.Column(db.Text)
+    date_created = db.Column(db.DateTime,  default=datetime.datetime.utcnow)
 
     def __repr__(self):
-        return '<Blogpost {}>'.format(self.content) 
+        return 'Blogpost {}'.format(self.content) 
 
 
 @app.route('/')
