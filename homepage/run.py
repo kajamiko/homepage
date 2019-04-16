@@ -18,6 +18,7 @@ app.config.update(dict(
     SQLALCHEMY_DATABASE_URI=str(os.environ.get('SQLALCHEMY_DATABASE_URI')),
     SQLALCHEMY_POOL_RECYCLE=299,
     SQLALCHEMY_TRACK_MODIFICATIONS=False,
+    SECRET_KEY=str(os.environ.get('SECRET_KEY')),
     # SECRET_KEY='development key',
     # MAIL_SERVER='smtp.mail.yahoo.com',
     # MAIL_PORT = 465,
