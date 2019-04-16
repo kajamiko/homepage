@@ -4,7 +4,6 @@ from socket import gethostname
 from flask import Flask, render_template, url_for, request, redirect, flash, session
 from forms import ContactForm
 from flask_sqlalchemy import SQLAlchemy
-from blogpost import Blogpost
 
 
 
