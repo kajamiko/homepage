@@ -6,3 +6,4 @@ homepage/__pycache__
 secret.py
 requirements.txt
 env/
+.vscode/
