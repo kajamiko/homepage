@@ -30,8 +30,8 @@ class Blogpost(db.Model):
     content = db.Column(db.Text)
     date_created = db.Column(db.DateTime,  default=datetime.datetime.utcnow)
 
-    def __repr__(self):
-        return 'Blogpost {}'.format(self.content) 
+    # def __repr__(self):
+    #     return 'Blogpost {}'.format(self.content) 
 
 
 @app.route('/')
