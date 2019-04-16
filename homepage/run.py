@@ -62,6 +62,10 @@ class Blogpost(db.Model):
     
     content = db.Column(db.String(4096))
 
+    def __repr__(self):
+        return '<Blogpost {}>'.format(self.content) 
+
+
 @app.route('/')
 def index():
 
