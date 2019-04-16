@@ -7,50 +7,17 @@ from flask_sqlalchemy import SQLAlchemy
 
 
 
-# def async_send_mail(app, msg):
-#     with app.app_context():
-#         mail.send(msg)
 
-
-# def create_app():
 app = Flask(__name__)
 app.config.update(dict(
     SQLALCHEMY_DATABASE_URI=str(os.environ.get('SQLALCHEMY_DATABASE_URI')),
     SQLALCHEMY_POOL_RECYCLE=299,
     SQLALCHEMY_TRACK_MODIFICATIONS=False,
     SECRET_KEY=str(os.environ.get('SECRET_KEY')),
-    # SECRET_KEY='development key',
-    # MAIL_SERVER='smtp.mail.yahoo.com',
-    # MAIL_PORT = 465,
-    # MAIL_DEFAULT_SENDER = str(os.environ.get('MAIL_USERNAME')),
-    # MAIL_USERNAME = str(os.environ.get('MAIL_USERNAME')),
-    # MAIL_PASSWORD = str(os.environ.get('MAIL_PASSWORD')),
-    # MAIL_USE_TLS = False,
-    # MAIL_USE_SSL = True
+
     ))
-    # register_extensions(app)
-    # return app
 
-# def register_extensions(app):
-#     db.init_app(app)
-
-# app = create_app()
-# mail = Mail(app)
 db=SQLAlchemy(app)
-
-# def send_mail(subject, recipient, template, **kwargs):
-#     msg = Message(subject, sender=app.config['MAIL_DEFAULT_SENDER'], recipients=[recipient])
-#     msg.html = render_template(template, **kwargs)
-#     try:
-#         mail.send(msg)
-#         if session.get('lang') == 'pl':
-#             return 'Wiadomość została wysłana.'
-#         else:
-#             return 'Your message has been sent'
-#     except Exception as e:
-#         print(e)
-#         return "Something went wrong x.x!"
-#     return None
 
 
 
