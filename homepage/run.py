@@ -56,7 +56,7 @@ db=SQLAlchemy(app)
 
 class Blogpost(db.Model):
 
-    __tablename__ = "Blogposts"
+    __tablename__ = "blogposts"
 
     id = db.Column(db.Integer, primary_key=True)
     
