@@ -19,8 +19,6 @@ app.config.update(dict(
 
 db=SQLAlchemy(app)
 
-
-
 class Blogpost(db.Model):
 
     __tablename__ = "blogposts"
@@ -87,7 +85,7 @@ def set_lang(lang='eng'):
 @app.route('/blog')
 def blog_home():
 
-    return render_template('blog_home.html', posts=Blogpost.query.all())
+    return render_template('blog_home.html', posts=Blogpost.query.order_by(Blogpost.date_created.desc()).all())
 
 def redirect_url(default='index'):
     return request.referrer
