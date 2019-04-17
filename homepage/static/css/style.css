@@ -113,16 +113,19 @@
       background-position: center;
       background-repeat: no-repeat; /* Do not repeat the image */
       background-size: cover;
-  	}
+		}
+		.blog-container {
+			margin-top: 10px;
+		}
   	.blogpost {
 			padding: 10px;
 			border-bottom: 1px solid gainsboro;
 		}
 
-		.date-info {
+		#date-info {
 			color: darkgrey;
 			text-align: end;
-			
+
 		}
 
   	/*Materialize*/
