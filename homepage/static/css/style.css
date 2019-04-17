@@ -114,7 +114,16 @@
       background-repeat: no-repeat; /* Do not repeat the image */
       background-size: cover;
   	}
-  	
+  	.blogpost {
+			padding: 10px;
+			border-bottom: 1px solid gainsboro;
+		}
+
+		.date-info {
+			color: darkgrey;
+			text-align: end;
+		}
+
   	/*Materialize*/
     
     input[type=text]:focus:not([readonly]),
