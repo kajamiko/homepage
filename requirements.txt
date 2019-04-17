@@ -39,7 +39,7 @@ pygobject==3.20.0
 pyparsing==2.0.3
 python-systemd==231
 reportlab==3.3.0
-requests==2.8.1
+requests==2.20.0
 vboxapi==1.0
 wrapt==1.11.1
 asn1crypto==0.24.0
