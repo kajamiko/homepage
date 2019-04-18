@@ -13,10 +13,13 @@
         <h5>{{post.title}}</h5>
         <p id="date-info">{{post.date_created}}</p>
         <!-- <p> -->
-          {{post.content}}
+          {% for con in post.content %}
+          <p>{{con}}</p>
+          {% endfor %}
         <!-- </p> -->
     </div>
 {% endfor %}
 </div>
 
 {% endblock %}
+

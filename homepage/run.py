@@ -28,8 +28,7 @@ class Blogpost(db.Model):
     content = db.Column(db.Text)
     date_created = db.Column(db.DateTime,  default=datetime.datetime.utcnow)
 
-    # def __repr__(self):
-    #     return 'Blogpost {}'.format(self.content) 
+
 
 
 @app.route('/')
@@ -84,8 +83,12 @@ def set_lang(lang='eng'):
 
 @app.route('/blog')
 def blog_home():
-
-    return render_template('blog_home.html', posts=Blogpost.query.order_by(Blogpost.date_created.desc()).all())
+    #return posts
+    raw_posts = Blogpost.query.order_by(Blogpost.date_created.desc()).all()
+    # for each post, split content in paragraphs
+    for raw_post in raw_posts:
+        raw_post.content = raw_post.content.split("<p>")
+    return render_template('blog_home.html', posts=raw_posts)
 
 def redirect_url(default='index'):
     return request.referrer
